@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <title>Consultar atletas</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/get.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <h1>Lista de Atletas</h1>
-        <p>Prática com o método GET: buscar e exibir os atletas da API do codeverse</p>
-        </header>
-        <main>
-            <a href="pages/consulta.html">Ir para o consulta de atletas</a>
-            <section id="conteiner-titulo-lista">
-                <h2 id="titulo-lista">Atletas cadastrados</h2>
-                <p>Os atletas carregados automaticamente ao iniciar a página</p>
-                <p id="resposta"></p>
-                <ul id="lista-atletas"></ul>
-            </section>
-        </main>
-       <template id="modelo-atleta">
-    <li>
-        <section class="card-capa">
-            <img alt="" />
-        </section>
-        <section class="card-conteudo">
-            <h3 class="nome"></h3> 
-            <p><strong>Esporte:</strong> <span class="esporte"></span></p>
-            <p><strong>País:</strong> <span class="pais"></span></p>
-            <p><strong>Idade:</strong> <span class="idade"></span></p>
-            <p><strong>Time:</strong> <span class="time"></span></p>
-        </section>
-    </li>
-</template>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Atletas</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/post.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Atletas</h1>
+      <p>Preencha os dados abaixo!!!</p>
+    </header>
+    <main>
+      <section>
+        <p><a href="pages/get.html">Consultar atletas</a></p>
+        <h2>Novo herói</h2>
+
+        <form id="form-atleta">
+          <label for="title">Nome do Atleta: </label>
+          <input id="title" name="title" type="text" minlength="3" maxlength="120" required />
+
+          <label for="esporte">esporte: </label>
+          <input id="esporte" name="esporte" type="text" required />
+
+          <label for="país">país: </label>
+          <input id="país" name="país" type="text" required />
+
+          <label for="idade">idade: </label>
+          <input id="idade" name="idade" type="text" required />
+
+          <label for="conquistas">conquistas: </label>
+          <input id="conquistas" name="conquistas" type="text" required />
+
+          <label for="imageUrl">URL da imagem (opcional): </label>
+          <input id="imageUrl" name="imageUrl" type="url" />
+
+          <button type="submit">Cadastrar Atleta</button>
+        </form>
+
+        <p id="resposta"></p>
+      </section>
+    </main>
+  </body>
 </html>

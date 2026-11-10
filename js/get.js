@@ -34,7 +34,7 @@ async function buscarAtletas() {
       card.querySelector(".esporte").textContent = atleta.esporte;
       card.querySelector(".pais").textContent = atleta.pais;
       card.querySelector(".idade").textContent = atleta.idade;
-      card.querySelector(".time").textContent = atleta.time;
+      card.querySelector(".conquistas").textContent = atleta.conquistas;
       
       const imagem = card.querySelector("img");
 
